@@ -1,25 +1,18 @@
-const headgehogLeaf = document.getElementById("hedgehog1")
-const headgehogStare = document.getElementById("hedgehog2")
-const headgehogYay = document.getElementById("hedgehog3")
-const headgehogFlowers = document.getElementById("hedgehog4")
-const headgehogFrens = document.getElementById("hedgehog5")
+const hedgehogImg = document.getElementById("hedgehog-img")
+let hedgehogImgNum = 1;
 
-function changeHedgehogs(num){
-headgehogLeaf.classList.add("hidden")
-headgehogStare.classList.add("hidden")
-headgehogYay.classList.add("hidden")
-headgehogFlowers.classList.add("hidden")
-headgehogFrens.classList.add("hidden")
-
-if(num === 1) headgehogLeaf.classList.remove("hidden");
-if(num === 2) headgehogStare.classList.remove("hidden");
-if(num === 3) headgehogYay.classList.remove("hidden");
-if(num === 4) headgehogFlowers.classList.remove("hidden");
-if(num === 5) headgehogFrens.classList.remove("hidden");
+hedgehogImg.addEventListener("click", function(){
+if(hedgehogImgNum===1){
+    hedgehogImg.src = "hedgehog_images/hedgehog_stare.jpg"
+} else if (hedgehogImgNum===2){
+    hedgehogImg.src = "hedgehog_images/hedgehog_yay.jpg"
+} else if(hedgehogImgNum===3){
+    hedgehogImg.src = "hedgehog_images/hedgehog_flowers.jpg"
+} else if (hedgehogImgNum===4){
+    hedgehogImg.src = "hedgehog_images/hedgehog_frens.jpg"
+} else{
+    hedgehogImg.src = "hedgehog_images/hedgehog_leaf.jpg"
+    hedgehogImgNum = 0
 }
-
-headgehogLeaf.addEventListener("click", changeHedgehogs(1));
-headgehogStare.addEventListener("click", changeHedgehogs(2));
-headgehogYay.addEventListener("click", changeHedgehogs(3));
-headgehogFlowers.addEventListener("click", changeHedgehogs(4));
-// headgehogFrens.addEventListener("click", changeHedgehogs(5));
+hedgehogImgNum ++;
+});

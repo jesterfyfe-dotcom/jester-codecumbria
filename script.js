@@ -2,6 +2,8 @@ const hedgehogImg = document.getElementById("hedgehog-img");
 const wormImg = document.getElementById("worm-img");
 const wormEatingDisplay = document.getElementById("worm-eating");
 const wormCatchingUpgrade = document.getElementById("worm-catching-upgrade");
+const frenButton = document.getElementById("fren");
+const splashGif = document.getElementById("splash-gif");
 
 let hedgehogImgNum = 1;
 let wormsEaten = 0;
@@ -48,3 +50,5 @@ if(wormCatchingLevel === wormCatchingUpgradePrice.length){
     wormCatchingUpgrade.classList.add("hidden");
 }
 })
+
+frenButton.

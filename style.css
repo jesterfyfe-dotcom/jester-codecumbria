@@ -36,6 +36,16 @@ margin: auto;
     font-weight: bold;
 }
 
+#fren{
+    position:absolute;
+    right: 30px;
+    border: solid 5px black;
+    padding: 5px;
+    font-size:medium;
+    font-weight: bold;
+    background-color:pink;
+}
+
 #worm-img {
     display: block;
     margin: auto;

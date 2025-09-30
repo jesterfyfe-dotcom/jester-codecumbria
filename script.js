@@ -1,5 +1,9 @@
-const hedgehogImg = document.getElementById("hedgehog-img")
+const hedgehogImg = document.getElementById("hedgehog-img");
+const wormImg = document.getElementById("worm-img");
+const wormEatingDisplay = document.getElementById("worm-eating");
+
 let hedgehogImgNum = 1;
+let wormsEaten = 0;
 
 hedgehogImg.addEventListener("click", function(){
 if(hedgehogImgNum===1){
@@ -16,3 +20,12 @@ if(hedgehogImgNum===1){
 }
 hedgehogImgNum ++;
 });
+
+function updateWormDisplay(){
+    wormEatingDisplay.textContent = `Worms eaten: ${wormsEaten}`
+}
+
+wormImg.addEventListener("click", function(){
+    wormsEaten ++;
+    updateWormDisplay();
+})
